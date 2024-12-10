@@ -12,7 +12,7 @@
             <div class="auth-header">
                 <h2><span class="header-icon">&#128274;</span> Verify Account</h2>
             </div>
-            <form action="{% url 'verify_account' %}" method="POST">
+            <form action="" method="POST">
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="code" class="form-label">Verification Code</label>
@@ -23,7 +23,7 @@
                 <button type="submit" class="btn">Verify</button>
             </form>
             <p class="form-group">
-                <a href="{% url 'register' %}" style="color: #1e3a64;">Back to Registration</a>
+                <a href="" style="color: #1e3a64;">Back to Registration</a>
             </p>
 
         </div>

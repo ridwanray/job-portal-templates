@@ -40,22 +40,22 @@
                     </td>
                     <td>{{ job.total_applicants }}</td>
                     <td>
-                        <a href="{% url 'advert_applications' job.id %}" target="_blank">
+                        <a href="" target="_blank">
                             View applicants
                         </a>
                     </td>
                     <td>
-                        <a href="{% url 'job_advert' job.id %}" target="_blank">
+                        <a href="" target="_blank">
                             View job
                         </a>
                     </td>
                     <td>
-                        <a href="{% url 'update_advert' job.id %}" target="_blank">
+                        <a href="" target="_blank">
                             Edit
                         </a>
                     </td>
                     <td>
-                        <form method='POST' action="{% url 'delete_advert' job.id %}">{% csrf_token %}
+                        <form method='POST' action="">{% csrf_token %}
 
                             <button type="submit" class='small-btn'>Delete</button>
 

@@ -8,7 +8,7 @@
 {% include 'header.html' %}
 
 <div class="search-container">
-    <form action="{% url 'search' %}" method="GET" class="search-box">
+    <form action="" method="GET" class="search-box">
         <input type="text" name="keyword" placeholder="title, company, description, skills">
         <input type="text" name="location" placeholder="location">
         <button type="submit">Search</button>
@@ -24,7 +24,7 @@
                 <p><strong>Type:</strong> {{advert.job_type}}</p>
                 <p><strong>Posted:</strong> {{advert.created_at | naturalday  | title}}</p>
                 <p><strong>Skills:</strong>{{advert.skills|truncatechars:14}}</p>
-                <a class="small-btn"  href="{% url 'job_advert' advert.id %}">View Details</a>
+                <a class="small-btn"  href="">View Details</a>
 
             </div>
 
