@@ -33,7 +33,7 @@
                                 Download CV
                             </a>
                         </td>
-                        <td>{{ application.applicant_status }}</td>
+                        <td>{{ application.status }}</td>
                         <td>
                             <a href="" target="_blank">
                                 View
@@ -44,15 +44,15 @@
                             <span>
                                 <form method="post" action="{% url 'decide' application.id %}">
                                     {% csrf_token %}
-                                    <select name="applicant_status"  {% if application.applicant_status != 'APPLIED' %} disabled {% endif %}>
-                                        <option value='APPLIED' {% if application.applicant_status == 'APPLIED' %} selected {% endif %}>APPLIED</option>
+                                    <select name="status"  {% if application.status != 'APPLIED' %} disabled {% endif %}>
+                                        <option value='APPLIED' {% if application.status == 'APPLIED' %} selected {% endif %}>APPLIED</option>
 
-                                        <option value='REJECTED' {% if application.applicant_status == 'REJECTED' %} selected {% endif %}>REJECTED</option>
+                                        <option value='REJECTED' {% if application.status == 'REJECTED' %} selected {% endif %}>REJECTED</option>
 
-                                        <option value='INTERVIEW' {% if application.applicant_status == 'INTERVIEW' %} selected {% endif %}>INTERVIEW</option>
+                                        <option value='INTERVIEW' {% if application.status == 'INTERVIEW' %} selected {% endif %}>INTERVIEW</option>
 
                                     </select>
-                                    <button class="" type="submit" {% if application.applicant_status != 'APPLIED' %} disabled {% endif %}>Decide
+                                    <button class="" type="submit" {% if application.status != 'APPLIED' %} disabled {% endif %}>Decide
                                     </button>
 
                                 </form>
